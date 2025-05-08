@@ -1,0 +1,194 @@
+/**
+ * Owl Carousel v2.2.1
+ * Copyright 2013-2017 David Deutsch
+ * Licensed under  ()
+ * 	Default theme - Owl Carousel CSS File
+ */
+.owl-stage {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: box;
+}
+.owl-carousel{margin-bottom: 30px;}
+.owl-theme .owl-nav {
+	margin-top: 10px;
+	-webkit-tap-highlight-color: transparent;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top:-40px;
+	width: 100%;
+	text-align: left;
+    height: 0px;
+}
+.timeline .owl-theme .owl-nav{top:12px;margin-top: 0;}
+.owl-theme .owl-nav div {
+	box-sizing: content-box;
+	padding: 10px;
+	width: 24px;
+	height: 42px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.timeline .owl-nav div {
+    padding: 0;
+    width:30px;
+    height: 30px;
+    opacity: 0.6;
+}
+.owl-theme .owl-nav .owl-next {
+	float: right;
+	background: url(../img/icon-next.png) no-repeat center center;
+	right: 0px;
+	background-size: 24px 42px;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+.timeline .owl-nav .owl-next{
+    background: url(../img/icon-timeline-btn-right.png)no-repeat center center;
+    background-size: 30px 30px;
+    margin-right: -30px;
+    margin-top:-12px;
+}
+.stories .owl-nav .owl-next{
+    float: right;
+	background: url(../img/icon-next-shadow.png) no-repeat center center;
+	right: 0px;
+	background-size: 22px 30px;
+    opacity: 0;
+    display: none;
+    
+}
+.owl-theme .owl-nav .owl-prev {
+	float: left;
+	background: url(../img/icon-prev.png) no-repeat center center;
+	left: 0px;
+	background-size: 24px 42px;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+.timeline .owl-nav .owl-prev {
+     background: url(../img/icon-timeline-btn-left.png)no-repeat center center;
+    background-size: 30px 30px;
+    margin-left: -30px;
+    margin-top:-12px;
+}
+.stories .owl-nav .owl-prev {
+	float: left;
+	background: url(../img/icon-prev-shadow.png) no-repeat center center;
+	left: 0px;
+	background-size: 22px 30px;
+    opacity: 0;
+    display: none;
+}
+.owl-theme .owl-nav [class*='owl-'] {
+	color: #FFF;
+	font-size: 14px;
+	display: inline-block;
+	cursor: pointer;
+}
+.owl-theme .owl-nav [class*='owl-']:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+	text-decoration: none;
+}
+.timeline .owl-nav [class*='owl-']:hover {
+	background-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+}
+.stories:hover .owl-nav .owl-prev,.stories:hover .owl-nav .owl-next{
+    opacity: 1;
+    display: none;
+} 
+.stories .owl-nav [class*='owl-']:hover {
+	background-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+}
+@media all and (max-width:768px){
+    .stories .owl-nav .owl-prev{opacity: 1;display: block;}
+    .stories .owl-nav .owl-next{opacity: 1;display: block;}
+    .stories:hover .owl-nav .owl-prev,.stories:hover .owl-nav .owl-next{display: block;}
+}
+.owl-theme .owl-nav .disabled {
+	opacity: 0;
+	cursor: default;
+}
+.timeline .owl-nav .disabled {
+    opacity: 0.2!important;
+}
+.owl-theme .owl-nav.disabled + .owl-dots {
+	margin-top: 10px;
+}
+.owl-theme .owl-dots {
+	display: none;
+	text-align: center;
+	-webkit-tap-highlight-color: transparent;
+}
+.owl-theme .owl-dots .owl-dot {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+.owl-theme .owl-dots .owl-dot span {
+	width: 10px;
+	height: 10px;
+	margin: 5px 7px;
+	background: #D6D6D6;
+	display: block;
+	-webkit-backface-visibility: visible;
+	transition: opacity 200ms ease;
+	border-radius: 30px;
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+	background: #869791;
+}
+.timeline .owl-stage-outer{
+    position: relative;
+}
+.timeline .owl-stage-outer:before{
+    content:'';
+    width:100%;
+    height: 1px; 
+    background: #505050;
+    left:0;
+    top:20px;
+    position: absolute;
+    z-index: 0;
+}
+.timeline div{
+    text-align: center;
+    padding-top: 3px;
+}
+.timeline div.item a{
+    background:url(../img/icon-timeline-dot.png)no-repeat center top;
+    background-size: 15px 15px;
+    padding-top: 25px;
+    display: inline-block;
+    color:#000;
+    cursor: pointer;
+}
+.timeline .owl-item.active .item a.active{
+    background:url(../img/icon-timeline-dot-select.png)no-repeat center top;
+    background-size: 15px 15px;
+}
+.timeline .time-w{
+    cursor: pointer;
+    display: inline-block;
+}
+.timeline div span{
+    font-size: 14px;
+    display: block;
+    line-height: 20px;
+}
+.timeline div span.time-ttl{
+    height: 50px;
+    padding: 0 5px;
+}
+.timeline .time{font-weight: bold;}
+.world-timeline-wrapper{
+    padding: 0 30px;
+    padding-top: 13px;
+}
+.timeline{margin-bottom: 20px;}
+.timeline-events p{padding-bottom: 18px;}
